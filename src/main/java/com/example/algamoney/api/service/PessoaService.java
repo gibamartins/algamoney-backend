@@ -15,12 +15,8 @@ public class PessoaService {
 	private PessoaRepository pessoaRepository;
 
 	public Pessoa atualizar(Long codigo, Pessoa pessoa) {
-		Pessoa pessoaSalva = pessoaRepository.findOne(codigo);
-		if (pessoaSalva == null) {
-			// O método findOne espera pelo menos 1 pessoa
-			throw new EmptyResultDataAccessException(1);
-		}
-		
+		Pessoa pessoaSalva = buscarPessoaPeloCodigo(codigo);
+
 		BeanUtils.copyProperties(pessoa, pessoaSalva, "codigo");
 		return pessoaRepository.save(pessoaSalva);
 	}
@@ -33,6 +29,7 @@ public class PessoaService {
 	
 	private Pessoa buscarPessoaPeloCodigo(Long codigo) {
 		Pessoa pessoaSalva = pessoaRepository.findOne(codigo);
+		// O método findOne espera pelo menos 1 pessoa
 		if (pessoaSalva == null) {
 			throw new EmptyResultDataAccessException(1);
 		}
