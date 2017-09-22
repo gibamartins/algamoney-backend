@@ -1,7 +1,5 @@
 package com.example.algamoney.api.resource;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
@@ -40,11 +38,6 @@ public class PessoaResource {
 
 	@Autowired
 	private ApplicationEventPublisher publisher;
-
-	@GetMapping
-	public List<Pessoa> listar() {
-		return pessoaRepository.findAll();
-	}
 	
 	@PostMapping
 	@PreAuthorize("hasAuthority('ROLE_CADASTRAR_PESSOA') and #oauth2.hasScope('write')")

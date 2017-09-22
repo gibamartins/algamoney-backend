@@ -1,13 +1,13 @@
 CREATE TABLE usuario (
 	codigo BIGINT PRIMARY KEY,
-	nome CHAR(50) NOT NULL,
-	email CHAR(50) NOT NULL,
-	senha CHAR(150) NOT NULL
+	nome character varying(50) NOT NULL,
+	email character varying(50) NOT NULL,
+	senha character varying(150) NOT NULL
 );
 
 CREATE TABLE permissao (
 	codigo BIGINT PRIMARY KEY,
-	descricao CHAR(50) NOT NULL
+	descricao character varying(50) NOT NULL
 );
 
 CREATE TABLE usuario_permissao (

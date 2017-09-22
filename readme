@@ -1,0 +1,56 @@
+- Conexão via terminal no POSTGRESQL
+psql -h localhost -U postgres -W algamoneyapi
+
+- Mostra a situação dos arquivos no git (atualizados, atualizados e passíveis de commit/push), etc.
+git status
+
+- Torna os arquivos atualizados passíveis de commit/push 
+git add .
+
+- Commita os arquivos, passando uma mensagem
+git commit -m 'Primeira Versão'
+
+heroku login
+
+heroku create despesas-api
+
+heroku addons:create jawsdb
+heroku addons:create heroku-postgresql:hobby-dev
+heroku config:get DATABASE_URL
+
+sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
+curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install heroku
+heroku login
+
+cd /home/desenvolvimento/algaworks/
+cd algamoney-api/
+git init
+git status
+gedit .gitignore 
+
+git commit -m 'Primeira Versão'
+git config --global user.email gr.martins@gmail.com
+git config --global user.name Gilberto
+git commit -m 'Primeira Versão'
+git status
+
+heroku config:get DATABASE_URL
+heroku config
+heroku config:set JDBC_DATABASE_URL=jdbc:postgres://ec2-54-225-88-191.compute-1.amazonaws.com:5432/db73rjkogm7aog
+heroku config:set JDBC_DATABASE_USERNAME=arqapbxlvdtbvn
+heroku config:set JDBC_DATABASE_PASSWORD=ef1a31e569dda389b9cfc48cf0881a4864082f8e83d314a195cd6f82eac05cb8
+heroku config
+
+cd .mozilla/firefox/8v4bbzjd.default/gmp-gmpopenh264/
+
+git push heroku master
+heroku logs --tail
+
+heroku config
+heroku config:set JDBC_DATABASE_URL=jdbc:postgresql://ec2-54-225-88-191.compute-1.amazonaws.com:5432/db73rjkogm7aog
+heroku config
+heroku logs --tail
+
+git clone https://github.com/algaworks/curso-angular-rest-spring-boot-api.git

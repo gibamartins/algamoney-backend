@@ -1,11 +1,11 @@
 CREATE TABLE lancamento (
 	codigo SERIAL PRIMARY KEY NOT NULL,
-	descricao CHAR(70) NOT NULL,
+	descricao character varying(70) NOT NULL,
 	data_vencimento DATE NOT NULL,
 	data_pagamento DATE,
 	valor DECIMAL(10,2) NOT NULL,
-	observacao CHAR(100),
-	tipo CHAR(20) NOT NULL,
+	observacao character varying(100),
+	tipo character varying(20) NOT NULL,
 	codigo_categoria BIGINT REFERENCES categoria(codigo),
 	codigo_pessoa BIGINT REFERENCES pessoa(codigo)
 );

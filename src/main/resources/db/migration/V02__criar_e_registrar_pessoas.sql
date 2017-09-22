@@ -1,13 +1,13 @@
 CREATE TABLE pessoa (
 	codigo SERIAL PRIMARY KEY NOT NULL,
-	nome CHAR(255) NOT NULL,
-	logradouro CHAR(255),
-	numero CHAR(50),
-	complemento CHAR(255),
-	bairro CHAR(100),
-	cep CHAR(10),
-	cidade CHAR(100),
-	estado CHAR(50),
+	nome character varying(255) NOT NULL,
+	logradouro character varying(255),
+	numero character varying(50),
+	complemento character varying(255),
+	bairro character varying(100),
+	cep character varying(10),
+	cidade character varying(100),
+	estado character varying(50),
 	ativo BOOLEAN NOT NULL
 );
 

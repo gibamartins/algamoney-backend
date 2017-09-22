@@ -1,6 +1,6 @@
 CREATE TABLE categoria (
 	codigo SERIAL PRIMARY KEY NOT NULL,
-	nome CHAR(50) NOT NULL
+	nome character varying(50) NOT NULL
 );
 
 INSERT INTO categoria (nome) values ('Lazer');
