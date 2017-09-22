@@ -38,7 +38,7 @@ git status
 
 heroku config:get DATABASE_URL
 heroku config
-heroku config:set JDBC_DATABASE_URL=jdbc:postgres://ec2-54-225-88-191.compute-1.amazonaws.com:5432/db73rjkogm7aog
+heroku config:set JDBC_DATABASE_URL=jdbc:postgresql://ec2-54-225-88-191.compute-1.amazonaws.com:5432/db73rjkogm7aog
 heroku config:set JDBC_DATABASE_USERNAME=arqapbxlvdtbvn
 heroku config:set JDBC_DATABASE_PASSWORD=ef1a31e569dda389b9cfc48cf0881a4864082f8e83d314a195cd6f82eac05cb8
 heroku config
