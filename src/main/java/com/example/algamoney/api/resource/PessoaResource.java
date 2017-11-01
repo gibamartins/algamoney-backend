@@ -86,6 +86,6 @@ public class PessoaResource {
 	@GetMapping
 	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_PESSOA')")
 	public Page<Pessoa> pesquisar(@RequestParam(required = false, defaultValue = "%") String nome, Pageable pageable) {
-		return pessoaRepository.findByNomeContaining(nome, pageable);
+		return pessoaRepository.findByNomeContainingIgnoreCase(nome, pageable);
 	}
 }
